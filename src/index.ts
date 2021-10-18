@@ -1,3 +1,4 @@
+/*
 let say = '1231'
 console.log(say)
 
@@ -39,3 +40,38 @@ printValues(u)
 
 let n: string = 'undefined'
 
+*/
+
+let name: string | undefined;
+if (typeof name === 'string') {
+  name.toLocaleLowerCase()
+}
+
+function printMenu() {
+  console.log(1)
+  console.log(2)
+}
+
+function throwError(msg: string):never {
+  throw new Error(msg);
+}
+function alwaysDoSome(): never {
+  while(true) { console}
+}
+
+let gender: '男' | '女';
+
+let user: {
+  name: string,
+  age? :number
+}
+user = {
+  name: 'Jay'
+}
+
+// 元祖类型
+let tu: [string, number]
+tu = ['2', 4]
+
+let data: any = '2342'
+let num: number = data
