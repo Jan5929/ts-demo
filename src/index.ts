@@ -42,6 +42,7 @@ let n: string = 'undefined'
 
 */
 
+/*
 let name: string | undefined;
 if (typeof name === 'string') {
   name.toLocaleLowerCase()
@@ -75,3 +76,43 @@ tu = ['2', 4]
 
 let data: any = '2342'
 let num: number = data
+*/
+
+/*
+type Gender = '男' | '女'
+type User = {
+  name: string,
+  age: number
+  gender: Gender
+}
+let u: User
+function getUsers(g:Gender): User[] {
+  return []
+}
+getUsers('男')
+*/
+
+/**
+ * 得到a和b相乘的结果
+ * @param a
+ * @param b
+ */
+
+// function combine(a: number, b: number): number;
+// function combine(a: string, b: string):string;
+// function combine(a: number | string, b: number | string): number | string {
+//   if (typeof a === 'number' && typeof b === 'number') {
+//     return a * b
+//   } else if (typeof a === 'string' && typeof b === 'string') {
+//     return a + b
+//   }
+//   throw new Error('a 和 b 必须是相同的类型')
+// }
+
+// const result = combine(3, 5)
+
+function sum(a: number, b: number, c: number = 0) {
+  return a + b + c
+}
+sum(3, 5)
+sum(3, 5, 7)
