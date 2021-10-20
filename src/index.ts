@@ -7,7 +7,6 @@ console.log(say)
 function add(a: number, b: number) {
   return a + b
 }
-
 let num = add(3, 4)
 
 let name = 'kevin'
@@ -92,11 +91,11 @@ function getUsers(g:Gender): User[] {
 getUsers('男')
 */
 
-/**
- * 得到a和b相乘的结果
- * @param a
- * @param b
- */
+// /**
+//  * 得到a和b相乘的结果
+//  * @param a
+//  * @param b
+//  */
 
 // function combine(a: number, b: number): number;
 // function combine(a: string, b: string):string;
@@ -111,8 +110,38 @@ getUsers('男')
 
 // const result = combine(3, 5)
 
-function sum(a: number, b: number, c: number = 0) {
-  return a + b + c
-}
-sum(3, 5)
-sum(3, 5, 7)
+// function sum(a: number, b: number, c: number = 0) {
+//   return a + b + c
+// }
+// sum(3, 5)
+// sum(3, 5, 7)
+
+// enum Gender {
+//   Male = "帅哥",
+//   female = "美女"
+// }
+// // type Gender = "男" | "女"
+// let gender: Gender;
+
+// function printGender() {
+//   const valS = Object.values(Gender)
+//   valS.forEach((val) => {console.log(val)})
+// }
+// printGender()
+// // function searchUsers(g: Gender) {
+
+// // }
+
+// enum Level {
+//   Level1,
+//   Level2,
+//   Level3
+
+// }
+// let l: Level = Level.Level1
+// l = Level.Level3
+// console.log(l)
+
+// function getLevel(lev: Level) {
+
+// }
