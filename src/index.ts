@@ -40,7 +40,6 @@ printValues(u)
 let n: string = 'undefined'
 
 */
-
 /*
 let name: string | undefined;
 if (typeof name === 'string') {
@@ -145,3 +144,13 @@ getUsers('男')
 // function getLevel(lev: Level) {
 
 // }
+
+// 模块化
+
+import { sum, name } from './myModules'
+
+console.log(name, sum(2, 4))
+
+import fs from 'fs'
+
+fs.readFileSync('./')

@@ -1,10 +1,15 @@
 {
   "compilerOptions": { // 编译选项
     "target": "es2016", // 配置编译目标代码的版本标准
-    "module": "CommonJS", // 配置编译目标使用的模块化标准
+    "module": "commonjs", // 配置编译目标使用的模块化标准
     "lib": ["es2016"], // ts执行环境
     "outDir": "./dist",
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "removeComments": true, // 编译结果移除注释
+    "noImplicitUseStrict": true, // 编译结果中关闭严格模式
+    "esModuleInterop": true, // 启动es模块化交互非es模块化导出
+    "noEmitOnError": true, // 报错不要编译
+    "moduleResolution": "node" // 使用node解析策略
   },
   "include": ["./src"], // 编译文件夹目录
   // "files": [] // 指定文件编译
