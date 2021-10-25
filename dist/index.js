@@ -1,8 +1,13 @@
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+/*
+ * @Author: your name
+ * @Date: 2021-10-25 10:19:21
+ * @LastEditTime: 2021-10-25 10:19:26
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /ts-demo/dist/index.js
+ */
+let person = {
+  name: '伪装成鸭子的人',
+  age: 11,
+  sound: '嘎嘎嘎'
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-const myModules_1 = require("./myModules");
-console.log(myModules_1.name, (0, myModules_1.sum)(2, 4));
-const fs_1 = __importDefault(require("fs"));
-fs_1.default.readFileSync('./');

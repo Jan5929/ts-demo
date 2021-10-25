@@ -76,6 +76,9 @@ let data: any = '2342'
 let num: number = data
 */
 
+import { Console } from "console";
+import { callbackify } from "util";
+
 /*
 type Gender = '男' | '女'
 type User = {
@@ -147,10 +150,115 @@ getUsers('男')
 
 // 模块化
 
-import { sum, name } from './myModules'
+// import { sum, name } from './myModules'
 
-console.log(name, sum(2, 4))
+// console.log(name, sum(2, 4))
 
-import fs from 'fs'
+// import fs from 'fs'
 
-fs.readFileSync('./')
+// fs.readFileSync('./')
+
+// 接口
+// interface User {
+//   name: string
+//   age: number,
+//   sayHello: () => void
+// }
+
+// // 类型别名
+// type User = {
+//   name: string
+//   age: number
+// }
+
+// type Condition = (n:number) => boolean
+// interface Condition {
+//   (n:number): boolean
+// }
+// let u: User = {
+//   name: 'Jay',
+//   age: 12,
+//   sayHello:() => {}
+// }
+// function sun(numbers: number[], callback: Condition) {
+//   let s = 0;
+//   numbers.forEach(n => {
+//     if (callback(n)) {
+//       s += n
+//     }
+//   })
+//   return s
+// }
+// const result = sun([3, 4, 5, 7, 11], n => n % 2 !== 0)
+// console.log(result)
+
+// interface A {
+//   T1: string
+// }
+// interface B {
+//   T2: number
+// }
+// interface C extends A,B {
+//   T3: boolean
+// }
+// let u: C = {
+//   T2: 1,
+//   T3: true,
+//   T1: '234'
+// }
+
+// interface UserS {
+//   readonly id: string,
+//   name: string,
+//   age: number
+// }
+
+// let u: UserS = {
+//   id: '1',
+//   name: 'jay',
+//   age: 26
+// }
+// console.log(u)
+
+// const arr: readonly number[] = [1, 2, 3]
+
+// const arr: ReadonlyArray<number> = [1, 2, 4]
+
+// type UserS = {
+//   readonly id: string,
+//   name: string,
+//   age: number,
+//   readonly arr: readonly string[]
+// }
+
+// let u: UserS = {
+//   id: '13',
+//   name: 'A',
+//   age: 33,
+//   arr: ['2', '1']
+// }
+
+// interface Duck {
+//   sound: '嘎嘎嘎',
+//   swIn(): void
+// }
+// let person = {
+//   name: '伪装成鸭子的人',
+//   age: 11,
+//   sound: '嘎嘎嘎' as '嘎嘎嘎', // 类型断言
+//   swIn() {
+//     console.log(this.name + '正在游泳, 并发出了' + this.sound + '的声音')
+//   }
+// }
+
+// let duck: Duck = person
+
+// interface User {
+//   name?: string
+//   age: number
+// }
+// let obj = {
+//   nema: 'a',
+//   age: 33
+// }
+// let u: User = obj
