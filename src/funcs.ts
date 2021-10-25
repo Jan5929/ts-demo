@@ -1,5 +1,14 @@
+import { Joker } from './types';
+/*
+ * @Author: your name
+ * @Date: 2021-10-25 11:11:29
+ * @LastEditTime: 2021-10-25 11:27:44
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /ts-demo/src/funcs.ts
+ */
 import { Color, Mark } from "./enums"
-import { Deck } from "./types"
+import { Deck, NormalCard } from "./types"
 
 export function createDeck(): Deck {
   const myDeck:Deck = []
@@ -7,27 +16,36 @@ export function createDeck(): Deck {
   const markS = Object.values(Mark)
   for (const m of markS) {
     for (const c of colorS) {
-      myDeck.push({
+      const card: NormalCard = {
         color: c,
-        mark: m
-      })
+        mark: m,
+        getString() {
+          return this.color + this.mark
+        }
+      }
+      myDeck.push(card)
     }
   }
-  // for (let i = 0; i < markS.length; i++) {
-  //   for (let j = 0; j < colorS.length; j++) {
-  //     myDeck.push({
-  //       color: colorS[j],
-  //       mark: markS[i]
-  //     })
-  //   }
-  // }
+  let joker: Joker = {
+    type: 'small',
+    getString() {
+      return 'jo'
+    }
+  }
+  myDeck.push(joker)
+  joker = {
+    type: 'big',
+    getString() {
+      return 'JO'
+    }
+  }
+  myDeck.push(joker)
   return myDeck
 }
 export function printDeck(deck: Deck) {
   let result = ''
   deck.forEach((card, i) => {
-    const str = card.color + card.mark
-    result += str + '\t'
+    result +=  card.getString() + '\t'
     if((i + 1) % 4 === 0) {
       result += '\n'
     }
